@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="사람을 이해하고 비즈니스를 성장시키는 대화형 AI, Soul-G 모델 소개">
+  <title>Soul-G | 더 깊이 이해하는 AI</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230c2825'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='34' font-family='Pretendard' font-weight='700' fill='%2357e6bd'%3ES%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Soul-G 홈">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Soul-G</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#models">모델</a>
+      <a href="#capabilities">기능</a>
+      <a href="#stories">사용 사례</a>
+      <a href="#trust">신뢰와 안전</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="header-cta" href="#contact">도입 문의 <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> SOUL-G 3.0 출시</div>
+        <h1>더 깊이 이해하고,<br><em>더 자연스럽게 연결하다.</em></h1>
+        <p>Soul-G는 대화의 맥락과 사람의 의도를 섬세하게 읽는 차세대 AI입니다. 복잡한 업무부터 따뜻한 일상의 대화까지, 당신에게 꼭 맞는 지능을 만나보세요.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#models">모델 살펴보기 <span>→</span></a>
+          <button class="button ghost" id="demoButton" type="button"><span class="play">▶</span> 1분 소개 보기</button>
+        </div>
+        <div class="hero-meta" aria-label="주요 지표">
+          <div><strong>180K</strong><span>토큰 컨텍스트</span></div>
+          <div><strong>42</strong><span>지원 언어</span></div>
+          <div><strong>99.9%</strong><span>서비스 가용성</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Soul-G 대화 예시">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="ai-core">
+          <div class="core-ring"><span></span><span></span><span></span></div>
+          <div class="core-logo"><b>S</b></div>
+        </div>
+        <div class="message-card user-message">
+          <span class="avatar user-avatar">나</span>
+          <p>이번 분기 고객 피드백을<br>핵심만 정리해 줄래?</p>
+        </div>
+        <div class="message-card ai-message">
+          <span class="avatar ai-avatar">S</span>
+          <div>
+            <small>Soul-G</small>
+            <p><span id="typingText"></span><span class="cursor"></span></p>
+          </div>
+        </div>
+        <span class="float-tag tag-one">맥락 이해</span>
+        <span class="float-tag tag-two">실시간 추론</span>
+      </div>
+    </section>
+
+    <section class="logo-strip" aria-label="Soul-G 활용 분야">
+      <p>다양한 산업의 팀이 Soul-G와 함께합니다</p>
+      <div class="industry-list">
+        <span>FINANCE</span><span class="spark">✣</span><span>COMMERCE</span><span class="spark">✣</span><span>HEALTHCARE</span><span class="spark">✣</span><span>EDUCATION</span><span class="spark">✣</span><span>CREATIVE</span>
+      </div>
+    </section>
+
+    <section class="models section-shell" id="models">
+      <div class="section-heading reveal">
+        <div>
+          <span class="kicker">MODEL FAMILY</span>
+          <h2>당신의 목적에 맞는<br>지능을 선택하세요.</h2>
+        </div>
+        <p>가벼운 실시간 대화부터 전문적인 추론까지.<br>Soul-G의 모든 모델은 안전하고 유연하게 설계되었습니다.</p>
+      </div>
+
+      <div class="model-tabs reveal" role="tablist" aria-label="Soul-G 모델 선택">
+        <button class="model-tab active" role="tab" aria-selected="true" data-model="pro"><span>01</span>Soul-G Pro</button>
+        <button class="model-tab" role="tab" aria-selected="false" data-model="lite"><span>02</span>Soul-G Lite</button>
+        <button class="model-tab" role="tab" aria-selected="false" data-model="vision"><span>03</span>Soul-G Vision</button>
+      </div>
+
+      <article class="model-panel reveal" id="modelPanel">
+        <div class="model-content">
+          <div class="model-label"><span></span><b id="modelType">FLAGSHIP MODEL</b></div>
+          <h3 id="modelName">Soul-G Pro</h3>
+          <p id="modelDescription">복잡한 문제를 깊이 있게 분석하고, 긴 문맥에서도 정확한 답을 찾아냅니다. 전략 수립, 데이터 해석, 전문 문서 작성에 최적화된 플래그십 모델입니다.</p>
+          <ul class="feature-list" id="modelFeatures">
+            <li><span>✓</span> 고난도 논리 추론</li>
+            <li><span>✓</span> 180K 장문 컨텍스트</li>
+            <li><span>✓</span> 도구 연동 및 에이전트</li>
+          </ul>
+          <a href="#contact" class="text-link">Pro 도입 상담하기 <span>↗</span></a>
+        </div>
+        <div class="model-specs">
+          <div class="spec-card accent-card">
+            <span class="spec-icon">⌁</span>
+            <small>추론 성능</small>
+            <strong id="reasoningValue">98.4</strong>
+            <div class="meter"><i id="reasoningMeter" style="width:98.4%"></i></div>
+          </div>
+          <div class="spec-card">
+            <span class="spec-icon">◫</span>
+            <small>최대 컨텍스트</small>
+            <strong id="contextValue">180K</strong>
+            <p>tokens</p>
+          </div>
+          <div class="spec-card wide">
+            <div><span class="spec-icon">⚡</span><small>응답 속도</small></div>
+            <strong id="speedValue">65 <small>tokens/sec</small></strong>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="capabilities section-shell" id="capabilities">
+      <div class="section-heading compact reveal">
+        <div><span class="kicker">CAPABILITIES</span><h2>말을 넘어,<br>일의 흐름을 이해합니다.</h2></div>
+      </div>
+      <div class="capability-grid">
+        <article class="capability-card large reveal">
+          <div class="card-number">01</div>
+          <div class="context-visual" aria-hidden="true">
+            <div class="context-line one"><i></i><span></span></div>
+            <div class="context-line two"><i></i><span></span></div>
+            <div class="context-line three"><i></i><span></span></div>
+            <div class="context-center">문맥</div>
+          </div>
+          <div><h3>맥락을 잃지 않는 대화</h3><p>길고 복잡한 대화에서도 중요한 정보와 숨은 의도를 기억해 일관된 답변을 제공합니다.</p></div>
+        </article>
+        <article class="capability-card reveal">
+          <div class="card-number">02</div>
+          <div class="mini-icon shield">◇</div>
+          <div><h3>안전한 엔터프라이즈 AI</h3><p>데이터 암호화와 권한 제어로 민감한 비즈니스 정보를 안전하게 보호합니다.</p></div>
+        </article>
+        <article class="capability-card reveal">
+          <div class="card-number">03</div>
+          <div class="mini-icon language">가<br><span>A</span></div>
+          <div><h3>자연스러운 다국어</h3><p>한국어의 미묘한 뉘앙스를 포함해 42개 언어로 자연스럽게 소통합니다.</p></div>
+        </article>
+        <article class="capability-card wide-card reveal">
+          <div class="card-number">04</div>
+          <div><h3>당신의 도구와 바로 연결</h3><p>간결한 API와 SDK로 기존 업무 환경에 빠르게 Soul-G의 지능을 더하세요.</p></div>
+          <div class="code-snippet"><span>const</span> answer = <b>await</b> soul.chat({<br>&nbsp;&nbsp;model: <em>'soul-g-pro'</em><br>})<i></i></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stories section-shell" id="stories">
+      <div class="section-heading reveal">
+        <div>
+          <span class="kicker">CUSTOMER STORIES</span>
+          <h2>일하는 순간마다,<br>Soul-G가 함께합니다.</h2>
+        </div>
+        <p>사람의 판단은 더 깊게, 반복되는 업무는 더 빠르게.<br>다양한 현장에서 Soul-G를 활용하는 방법을 만나보세요.</p>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card reveal">
+          <div class="story-image">
+            <img src="assets/use-case-finance.png" alt="Soul-G로 금융 데이터를 분석하는 고객" loading="lazy">
+            <span>FINANCE</span>
+          </div>
+          <div class="story-copy">
+            <small>01 · 데이터 분석</small>
+            <h3>복잡한 숫자에서<br>의미 있는 신호를 찾다</h3>
+            <p>방대한 리서치와 시장 데이터를 빠르게 연결해 더 정교한 의사결정을 돕습니다.</p>
+          </div>
+        </article>
+
+        <article class="story-card reveal">
+          <div class="story-image">
+            <img src="assets/use-case-support.png" alt="Soul-G로 고객 상담을 진행하는 고객 경험 담당자" loading="lazy">
+            <span>COMMERCE</span>
+          </div>
+          <div class="story-copy">
+            <small>02 · 고객 경험</small>
+            <h3>고객의 마음까지 이해하는<br>상담 경험을 만들다</h3>
+            <p>문의 의도와 감정을 이해해 빠르면서도 사람다운 답변을 제공합니다.</p>
+          </div>
+        </article>
+
+        <article class="story-card reveal">
+          <div class="story-image">
+            <img src="assets/use-case-education.png" alt="Soul-G와 교육 콘텐츠를 기획하는 학습 설계자" loading="lazy">
+            <span>EDUCATION</span>
+          </div>
+          <div class="story-copy">
+            <small>03 · 콘텐츠 제작</small>
+            <h3>아이디어를 배움의 경험으로<br>빠르게 발전시키다</h3>
+            <p>학습자 수준에 맞는 구성과 표현을 제안해 콘텐츠 제작 시간을 줄입니다.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="trust section-shell" id="trust">
+      <div class="trust-inner reveal">
+        <span class="kicker light">BUILT FOR TRUST</span>
+        <h2>강력한 지능은<br>신뢰에서 시작됩니다.</h2>
+        <p>Soul-G는 처음부터 책임 있는 AI를 목표로 설계되었습니다. 모든 대화와 데이터는 당신의 것으로 남습니다.</p>
+        <div class="trust-points">
+          <span><i>✓</i> 데이터 학습 미사용</span>
+          <span><i>✓</i> 전 구간 암호화</span>
+          <span><i>✓</i> 국내 리전 지원</span>
+        </div>
+      </div>
+      <div class="trust-seal reveal" aria-hidden="true">
+        <div class="seal-outer">SOUL-G · RESPONSIBLE AI · SOUL-G · TRUSTED ·</div>
+        <div class="seal-center">SG<span>✓</span></div>
+      </div>
+    </section>
+
+    <section class="faq section-shell" id="faq">
+      <div class="faq-title reveal"><span class="kicker">QUESTIONS</span><h2>자주 묻는 질문</h2><p>더 궁금한 점이 있나요?<br><a href="#contact">팀에 문의해 주세요 →</a></p></div>
+      <div class="accordion reveal">
+        <details open><summary>Soul-G는 다른 AI 모델과 무엇이 다른가요?<span></span></summary><p>한국어의 뉘앙스와 긴 대화의 맥락을 정교하게 이해하도록 설계됐습니다. 업무 도구 연동과 국내 환경에 맞춘 보안 옵션도 함께 제공합니다.</p></details>
+        <details><summary>우리 회사 데이터로 맞춤 설정할 수 있나요?<span></span></summary><p>네. 검색 증강 생성(RAG), 전용 지식 베이스, 맞춤형 응답 가이드로 조직에 최적화할 수 있습니다.</p></details>
+        <details><summary>API는 어떤 방식으로 사용할 수 있나요?<span></span></summary><p>REST API와 JavaScript·Python SDK를 제공합니다. 테스트 키를 발급받아 기존 서비스에 빠르게 연동할 수 있습니다.</p></details>
+        <details><summary>입력한 데이터는 모델 학습에 사용되나요?<span></span></summary><p>기업용 플랜의 입력과 출력 데이터는 모델 학습에 사용되지 않으며, 보관 정책도 직접 설정할 수 있습니다.</p></details>
+      </div>
+    </section>
+
+    <section class="cta-section section-shell" id="contact">
+      <div class="cta-orb" aria-hidden="true"><span>S</span></div>
+      <div class="reveal"><span class="kicker">START WITH SOUL-G</span><h2>당신의 다음 대화는<br>더 똑똑해질 수 있습니다.</h2><p>지금 Soul-G를 만나보세요. 첫 API 크레딧은 무료입니다.</p><a href="mailto:hello@soul-g.ai" class="button dark">Soul-G 시작하기 <span>→</span></a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark"><i></i><i></i><i></i></span><span>Soul-G</span></a><p>사람을 이해하는 지능,<br>가능성을 연결하는 대화.</p></div>
+    <div class="footer-links"><div><b>PRODUCT</b><a href="#models">모델</a><a href="#capabilities">기능</a><a href="#contact">API</a></div><div><b>COMPANY</b><a href="#trust">회사 소개</a><a href="#trust">안전과 윤리</a><a href="#contact">채용</a></div><div><b>CONNECT</b><a href="#contact">블로그</a><a href="#contact">LinkedIn</a><a href="#contact">GitHub</a></div></div>
+    <div class="footer-bottom"><span>© 2026 Soul-G AI. All rights reserved.</span><div><a href="#">개인정보처리방침</a><a href="#">이용약관</a></div></div>
+  </footer>
+
+  <div class="demo-modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoTitle" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-content">
+      <button class="modal-close" data-close-modal aria-label="닫기">×</button>
+      <span class="kicker">SOUL-G IN 60 SECONDS</span>
+      <h2 id="demoTitle">대화가 이해로 바뀌는 순간</h2>
+      <div class="demo-stage"><div class="demo-pulse">S</div><p id="demoCaption">질문의 맥락을 읽고 있습니다…</p></div>
+      <div class="demo-progress"><i id="demoProgress"></i></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
